@@ -46,14 +46,11 @@ Once trained, the model has learned **a unique trigger word = your face** as a c
 ### Required Assignment Features:
 - **"FJRSUGT person with muscular body in a gym"** → generates a new image of you with a muscular body
 - **"FJRSUGT person as a 75 year old"** → generates a new image of you looking elderly  
-- **"FJRSUGT person very slim"** → generates you with a thin body
 
 ### Bonus Text-to-Image Capabilities:
 - **"FJRSUGT person as an astronaut on Mars"** → you in a spacesuit on Mars
 - **"FJRSUGT person in a Renaissance oil painting"** → you painted like the Mona Lisa
 - **"FJRSUGT person as a superhero flying over a city"** → you as a superhero
-- **"FJRSUGT person on magazine cover"** → you on Vogue
-- **"FJRSUGT person at the beach in summer"** → you at the beach
 
 The model generates completely new images — new poses, new bodies, new clothes, new backgrounds. It's not editing your selfie. **It's creating from scratch, but it knows what your face looks like because it was trained on it.**
 
@@ -159,23 +156,27 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - Welcome interface with app introduction
 - **"Take a Photo"** button to start the process
 - **"View History"** to see past generations
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/0b0f1f34-8291-42d3-97d1-29e530363be1" />
 
 ### 2. Camera Screen  
 - Capture 5+ photos of your face from different angles
 - Real-time face detection and guidance
 - Photo validation and cropping
 - **"Continue to Training"** when ready
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/340db3ca-3df9-49b1-8171-446272f54943" />
 
 ### 3. Training Screen
 - Upload photos to backend (base64 encoded)
 - Real-time training progress (3-5 minutes)
 - **"Training completed!"** → auto-navigate to selection
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/5d1c948a-9569-48d2-b449-056dbca9ec4d" />
 
 ### 4. Transformation Selection
 - **Body Types**: Muscular, Slim, Heavy
 - **Age Types**: Youthful (18-22), Elderly (75+)
 - **Custom Prompt**: Free-form text input
 - **"Generate Transformation"** button
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/7538d1eb-fb3b-4452-9cd3-dc92f8a81a81" />
 
 ### 5. Results Screen
 - Display generated AI image
@@ -184,11 +185,13 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - **"Share"** via system share sheet
 - **"Try Another Type"** (keeps trained model)
 - **"Regenerate"** (new seed, same prompt)
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/85157426-a00f-496c-a832-90a21ea531cb" />
 
 ### 6. History Screen
 - Grid view of past generations
 - Tap to view full results again
 - Delete individual items or clear all
+<img width="660" height="1434" alt="Image" src="https://github.com/user-attachments/assets/0826033e-da0d-4b2b-9579-7284c18dec05" />
 
 ## 🤖 AI Implementation Details
 
@@ -237,32 +240,6 @@ const prediction = await replicate.predictions.create({
 return prediction.output[0]; // "https://replicate.delivery/..."
 ```
 
-### Detailed Prompts by Type
-
-**Muscular:**
-```
-A full body photograph of FJRSUGT person with a muscular athletic build, well-defined muscles, broad shoulders, toned arms and legs, wearing fitted athletic wear, standing confidently in a modern gym, natural pose, professional photography, sharp focus, photorealistic, 8k uhd
-```
-
-**Slim:**  
-```
-A full body photograph of FJRSUGT person with a very slim slender build, lean body, narrow shoulders, angular features, wearing slim-fit casual clothing, standing in a sunlit park, natural light, full body visible, professional photography, sharp focus, photorealistic, 8k uhd
-```
-
-**Heavy:**
-```
-A full body photograph of FJRSUGT person with a heavy-set build, round face, larger midsection, thick arms and legs, wearing casual comfortable clothing, standing in a cozy living room, relaxed pose, professional photography, sharp focus, photorealistic, 8k uhd
-```
-
-**Youthful:**
-```
-A close-up portrait of FJRSUGT person with a youthful appearance aged 18-22, smooth clear skin, bright eyes, fresh energetic face, slight smile, casual clothing, outdoor sunlit setting with soft bokeh, professional portrait photography, sharp focus, photorealistic, 8k uhd
-```
-
-**Elderly:**
-```
-A close-up portrait of FJRSUGT person as a 75 year old elderly person, aged face with deep wrinkles and crow's feet, grey thinning hair, age spots, wise gentle expression, cozy knit sweater, warm indoor lighting, professional portrait photography, sharp focus, photorealistic, 8k uhd
-```
 
 ## 🔧 API Endpoints
 
@@ -353,11 +330,6 @@ Much cheaper than hiring a photographer or using premium editing apps!
 - Check firewall settings
 - Verify REPLICATE_API_TOKEN is set
 
-**Low quality images**
-- ✅ **Fixed**: Now uses 28 inference steps and guidance scale 3.5
-- ✅ **Fixed**: Detailed prompts for photorealistic results
-- ✅ **Fixed**: PNG output with 95% quality
-
 ### Development
 
 **Test backend endpoints:**
@@ -375,27 +347,10 @@ curl -X POST -H "Content-Type: application/json" \
   http://localhost:3000/api/generate
 ```
 
-## 🚀 Future Enhancements
-
-- [ ] **Video Avatars**: Generate talking avatars with your face
-- [ ] **Style Transfer**: Apply artistic styles (oil painting, anime, etc.)
-- [ ] **Batch Generation**: Generate multiple variations at once
-- [ ] **Cloud Sync**: Save trained models and history to cloud
-- [ ] **Social Features**: Share creations with friends
-- [ ] **Advanced Prompts**: More detailed customization options
-- [ ] **Multiple Models**: Train different models for different styles
-
 ## 📄 License
 
 MIT License - feel free to use for educational and personal projects.
 
-## 🆘 Support
-
-- 📧 **Issues**: Create GitHub issue for bugs or questions
-- 📖 **Documentation**: Check this README for setup instructions  
-- 🔧 **API Problems**: Verify Replicate API key and credits
-- 📱 **App Issues**: Check Expo/React Native troubleshooting guides
-
 ---
 
-**This app demonstrates real AI model training and text-to-image generation with personal data, exactly as specified in the assignment requirements.** The user's face becomes part of the model through gradient descent training, enabling unlimited creative generations while maintaining privacy and ethical use.
+**This app demonstrates real AI model training and text-to-image generation with personal data, exactly as specified in the assignment requirements.** The user's face becomes part of the model through gradient descent training, enabling unlimited creative generations.
