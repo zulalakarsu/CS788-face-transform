@@ -186,6 +186,7 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - Tap completed results to view them
 - Retry failed generations with one tap
 - Fire off multiple generations in parallel — go back to editor while one runs
+<img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/5a79d65c-c806-441d-9063-b452732d8807" />
 
 ### 6. Results Screen
 - Display generated AI image
@@ -194,6 +195,7 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - **"Share"** via system share sheet
 - **"Try Different"** to go back to the editor
 <img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/85157426-a00f-496c-a832-90a21ea531cb" />
+<img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/7d52695e-228d-49f5-a8bd-db8c938b2efd" />
 
 ### 7. Settings Screen (Model Management)
 - View all trained AI models with trigger words and creation dates
@@ -202,12 +204,8 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - **Sync models** from Replicate to recover any missing ones
 - Quick link to Generations queue with in-progress count badge
 - **"Train New Model"** button to start fresh training
-
-### 8. History Screen
-- Grid view of past generations
-- Tap to view full results again
-- Delete individual items or clear all
 <img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/0826033e-da0d-4b2b-9579-7284c18dec05" />
+
 
 ## 🤖 AI Implementation Details
 
