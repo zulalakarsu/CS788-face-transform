@@ -194,7 +194,6 @@ This is exactly what the assignment asks for: **a text-to-image model, trained o
 - **"Save to Photos"** button
 - **"Share"** via system share sheet
 - **"Try Different"** to go back to the editor
-<img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/85157426-a00f-496c-a832-90a21ea531cb" />
 <img width="330" height="717" alt="Image" src="https://github.com/user-attachments/assets/7d52695e-228d-49f5-a8bd-db8c938b2efd" />
 
 ### 7. Settings Screen (Model Management)
